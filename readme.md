@@ -33,7 +33,7 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
 
-```bash
+``bash
 git clone https://github.com/your-username/course-book.git
 cd course-book
 
@@ -44,6 +44,7 @@ cd course-book
 
     - Ensure MongoDB is running.
     - Update the constants.js file in the src folder with your MongoDB connection details.
+
 
 ## Usage
 
@@ -80,5 +81,7 @@ constants.js: Configuration file for database connection, secret, and port.
 
 ## Contributing
 
-- Contributions are welcome! Feel free to open issues or submit pull requests.
+-Contributions are welcome! Feel free to open issues or submit pull requests.
+
+
 
