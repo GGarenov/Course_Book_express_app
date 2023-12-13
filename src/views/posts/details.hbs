@@ -1,0 +1,42 @@
+<div class="details-container">
+    <div class="details-container-image">
+        <img src="{{post.image}}">
+    </div>
+    <div class="details-container-info">
+        <h2>Title: {{post.title}}</h2>
+        <h3>Type: {{post.type}}</h3>
+        <h3>Certificate: {{post.certificate}}</h3>
+        <h3>Price: €{{post.price}}</h3>
+        <h3>By: {{post.owner.email}}</h3>
+
+        {{#if post.signUpList.length}}
+        <!-- If there are sign up users -->
+        <h4>Signed By: {{#each post.signUpList}}{{this.email}}{{#unless @last}}, {{/unless}}{{/each}}</h4>
+        {{else}}
+        <!-- If there are no sign up users -->
+        <h4>Nobody has signed in for this course yet</h4>
+        {{/if}}
+    </div>
+    <div class="details-container-content">
+        <p>{{post.description}}</p>
+    </div>
+    {{#if isAuthenticated}}
+    <div class="btn-container">
+        {{#if isOwner}}
+        <!-- Only for registered user and creator of the course-->
+        <a href="/posts/{{post._id}}/edit">Edit</a>
+        <a href="/posts/{{post._id}}/delete">Delete</a>
+        {{/if}}
+        {{#unless isOwner}}
+        {{#unless hasSignedUp}}
+        <!-- logged in user who has not yet signed up for the course-->
+        <a href="/posts/{{post._id}}/signup">Sign up</a>
+        {{/unless}}
+        {{/unless}}
+        <!-- logged in user who has already signed up for the course-->
+        {{#if hasSignedUp}}
+        <p class="sign-up">You've already signed up for this course!</p>
+        {{/if}}
+    </div>
+    {{/if}}
+</div>
