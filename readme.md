@@ -56,18 +56,19 @@ cd course-book
 3. Explore the application, register, and start managing courses and posts.
 
 ## Project Structure
-src: Main source code folder containing controllers, models, services, and other modules.
-controllers: Contains controllers for handling different routes.
-lib: JWT logic for user authentication.
-middlewares: Authentication middleware.
-models: Mongoose models for User and Post.
-public: CSS files.
-services: Service files for handling business logic.
-utils: Error handling utilities.
-views: Handlebars templates.
-index.js: Entry point of the application.
-router.js: Centralized routing configuration.
-constants.js: Configuration file for database connection, secret, and port.
+
+- src: Main source code folder containing controllers, models, services, and other modules.
+- controllers: Contains controllers for handling different routes.
+- lib: JWT logic for user authentication.
+- middlewares: Authentication middleware.
+- models: Mongoose models for User and Post.
+- public: CSS files.
+- services: Service files for handling business logic.
+- utils: Error handling utilities.
+- views: Handlebars templates.
+- index.js: Entry point of the application.
+- router.js: Centralized routing configuration.
+- constants.js: Configuration file for database connection, secret, and port.
 
 ## Dependencies
 
@@ -81,7 +82,7 @@ constants.js: Configuration file for database connection, secret, and port.
 
 ## Contributing
 
--Contributions are welcome! Feel free to open issues or submit pull requests.
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
 
 
